@@ -57,7 +57,9 @@ public class MiniGUI {
         write.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent e) {
-                System.out.println(rng.nextInt());
+                final int res = rng.nextInt();
+                tf.setText("Result: " + Integer.toString(res));
+                System.out.println(res);
             }
         });
     }
