@@ -47,6 +47,11 @@ public class MiniGUI {
         final JButton write = new JButton("Print a random number on standard output");
         panel.add(write);
         /*
+         * Ex 01.02
+         */
+        final JTextField tf = new JTextField("Result");
+        canvas.add(tf, BorderLayout.NORTH);
+        /*
          * Handlers
          */
         write.addActionListener(new ActionListener() {
