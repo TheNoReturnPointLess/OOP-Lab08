@@ -50,6 +50,18 @@ public class BadIOGUI {
         canvas.add(panel, BorderLayout.CENTER);
         panel.add(write);
         /*
+         * Ex 01.02
+         */
+        final JButton b = new JButton("Read");
+        final String s = "TestString";
+        panel.add(b);
+        b.addActionListener(new ActionListener() { 
+            @Override
+            public void actionPerformed(final ActionEvent e) {
+                System.out.println(s);
+            }
+        });
+        /*
          * Handlers
          */
         write.addActionListener(new ActionListener() {
