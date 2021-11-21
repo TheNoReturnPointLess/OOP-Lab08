@@ -52,10 +52,10 @@ public class BadIOGUI {
         /*
          * Ex 01.02
          */
-        final JButton b = new JButton("Read");
+        final JButton read = new JButton("Read");
         final String s = "TestString";
-        panel.add(b);
-        b.addActionListener(new ActionListener() { 
+        panel.add(read);
+        read.addActionListener(new ActionListener() { 
             @Override
             public void actionPerformed(final ActionEvent e) {
                 System.out.println(s);
