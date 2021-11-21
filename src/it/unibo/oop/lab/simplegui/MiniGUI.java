@@ -36,12 +36,14 @@ public class MiniGUI {
     public MiniGUI() {
         final JPanel canvas = new JPanel();
         canvas.setLayout(new BorderLayout());
-        final JButton write = new JButton("Print a random number on standard output");
-        /*  Ex 01.01
-         * canvas.add(write, BorderLayout.CENTER);
-         */
+        /* Ex 01.01 */
         frame.setContentPane(canvas);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        final JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.LINE_AXIS));
+        canvas.add(panel, BorderLayout.CENTER);
+        final JButton write = new JButton("Print a random number on standard output");
+        panel.add(write);
         /*
          * Handlers
          */
@@ -51,11 +53,6 @@ public class MiniGUI {
                 System.out.println(rng.nextInt());
             }
         });
-        /* Ex 01.01 */
-        final JPanel panel = new JPanel();
-        panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
-        canvas.add(panel, BorderLayout.CENTER);
-        panel.add(write);
     }
 
     private void display() {
